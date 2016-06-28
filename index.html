@@ -15,35 +15,28 @@
         <nav>
           <div class="container">
             <div class="row">
-              <div class="col s8">
+              <div class="col s12">
                 Futbol Tournaments!
-              </div>
-              <div class="col s4">
-                Inicio
               </div>
             </div>
           </div>
         </nav>
     </header>
+    <div ng-view></div>
 		<div class="tournaments">
 		<ul>
-      <h1>text</h1>
-      <li ng-repeat="tournaments in tournament" >
+      <h1>List all tournaments</h1>
+      <li ng-repeat="tournament in tournaments">
         <a href="#/{{tournament.id}}"> {{tournament.name}}</a>
-        <p>
-          {{tournament.league}}
-        </p>
       </li>
 		</ul>
-
 	</div>
 
 
 
-
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
