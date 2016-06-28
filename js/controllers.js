@@ -1,16 +1,15 @@
-var futbolCtrl = angular.module("futbolCtrl",[]);
+var calendarCtrl = angular.module("calendarCtrl",[]);
 
-futbolCtrl.controller("listTournamentsCtrl", ["$scope","$http",function($scope,$http) {
+calendarCtrl.controller("listCalendarCtrl", ["$scope","$http","$routeParams",function($scope,$http,$routeParams){
 
-		//var url= "http://api.football-api.com/2.0/competitions?Authorization=565eaa22251f932b9f000001d50aaf0b55c7477c5ffcdbaf113ebbda";
-		var url = 'http://api.football-data.org/v1/soccerseasons'
+		var url = "http://calapi.inadiutorium.cz/api/v0/en/calendars/default/2015/" + $routeParams.mes;
 		$http.get(url).success(function(data){
-			$scope.tournaments = data;
+			$scope.calendars = data;
 		});
 }]);
 
-futbolCtrl.controller("detalleTournamentCtrl",["$scope", "$http","$routeParams",function($scope,$http,$routeParams){
-		var urlDetalles = "http://api.football-api.com/2.0/competitions/"+ $routeParams.tournamentID+ '?Authorization=565eaa22251f932b9f000001d50aaf0b55c7477c5ffcdbaf113ebbda';
+calendarCtrl.controller("detalleCalendarCtrl",["$scope", "$http","$routeParams",function($scope,$http,$routeParams){
+		var urlDetalles = "http://calapi.inadiutorium.cz/api/v0/en/calendars/default/2015/" + $routeParams.mes + "/"+ $routeParams.dia;
 		$http.get(urlDetalles).success(function(datos){
 			$scope.detalleTournament = datos;
 		});

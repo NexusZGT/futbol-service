@@ -1,13 +1,13 @@
-var futbolService = angular.module("futbolService", ["ngRoute","futbolCtrl"]);
+var calendarService = angular.module("calendarService", ["ngRoute","calendarCtrl"]);
 
-futbolService.config(["$routeProvider", function($routeProvider){
-		$routeProvider.
-		when("/:tournamentID",{
-			templateUrl: "teams.html",
-			controller: "detalleTournamentCtrl"
-		}).
-		otherwise({
-			redirecTo: "/"
-		});
+calendarService.config(["$routeProvider", function($routeProvider){
+	$routeProvider.
+	when("/:mes",{
+		templateUrl: "meses.html",
+		controller: "listCalendarCtrl"
+	}).
+	otherwise({
+		redirecTo: "/"
+	});
 
 }]);

@@ -8,29 +8,37 @@
     <script src="js/angular-route.js"></script>
     <script src="js/angular-resource.js"></script>
     <meta charset="utf-8">
-    <title>FUTBOL WEBSERVICE</title>
+    <title>CALENDAR WEBSERVICE</title>
   </head>
-  <body ng-app="futbolService" ng-controller="listTournamentsCtrl">
+  <body ng-app="calendarService" ng-controller="listCalendarCtrl">
     <header>
         <nav>
           <div class="container">
             <div class="row">
-              <div class="col s12">
-                Futbol Tournaments!
+              <div class="col s12 center-align">
+                <h4>Calendar!</h1>
               </div>
             </div>
           </div>
         </nav>
     </header>
+    <div class="container valign-wrapper">
+          <a href="#/01" class="waves-effect waves-light btn">Enero</a>
+          <a href="#/02" class="waves-effect waves-light btn">Febrero</a>
+          <a href="#/03" class="waves-effect waves-light btn">Marzo</a>
+          <a href="#/04" class="waves-effect waves-light btn">Abril</a>
+          <a href="#/05" class="waves-effect waves-light btn">Mayo</a>
+          <a href="#/06" class="waves-effect waves-light btn">Junio</a>
+          <a href="#/07" class="waves-effect waves-light btn">Julio</a>
+          <a href="#/08" class="waves-effect waves-light btn">Agosto</a>
+          <a href="#/09" class="waves-effect waves-light btn">Setiembre</a>
+          <a href="#/10" class="waves-effect waves-light btn">Octubre</a>
+          <a href="#/11" class="waves-effect waves-light btn">Noviembre</a>
+          <a href="#/12" class="waves-effect waves-light btn">Diciembre</a>
+      </div>
+    </div>
+    
     <div ng-view></div>
-		<div class="tournaments">
-		<ul>
-      <h1>List all tournaments</h1>
-      <li ng-repeat="tournament in tournaments">
-        <a href="#/{{tournament.id}}"> {{tournament.caption}}</a>
-      </li>
-		</ul>
-	</div>
 
 
 
