@@ -9,5 +9,14 @@ calendarService.config(["$routeProvider", function($routeProvider){
 	otherwise({
 		redirecTo: "/"
 	});
+	$routeProvider.
+	when("/:mes/:dia",{
+		templateUrl: "dia.html",
+		controller: "detalleCalendarCtrl"
+	}).
+	otherwise({
+		redirecTo: "/"
+	});
+
 
 }]);
